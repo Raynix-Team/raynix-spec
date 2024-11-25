@@ -25,7 +25,7 @@ The kernel is a fork of Linux from the Linux Foundation, built as minimally as p
 The init system is simple. In each line, the setup of the configuration file in /krn/add/set.conf is like this: `(driver folder name) (1 or 0)`. The folder name is the driver in question, and the number is boolean, and tells the init system whether or not to search the directory for, and enable, the kernel bit (aptly named "kernel.bit"). It will also take commands available from installed programs akin to currently developed init systems, so you can go from bootloader to X session, where .xinitrc will do the rest.
 
 ### 3. Programs
-The recommended programs to be included with a Raynix distro are the GNU toolkit software and a minimal window manager for X11, similarly to how OpenBSD provides cwm using xenodm to get started. I, AceSoren will personally develop one in Raylib (which is where the first part of Raynix comes from) with two variants: framebuffer and OpenGL, which will automatically pass the baton if OpenGL capability is detected to improve the desktop experience.
+The recommended programs to be included with a Raynix distro are the GNU toolkit software and a minimal window manager for X11, similarly to how OpenBSD provides cwm using xenodm to get started. I, AceSoren will personally develop one in Raylib called RaynixWM (which is where the first part of Raynix comes from) with two variants: framebuffer and OpenGL, which will automatically pass the baton if OpenGL capability is detected to improve the desktop experience.
 
 ### 4. Hardware
 In the event that Raynix is ported to architectures with strange and forced screen resolutions that might not get detected (say a NeXTStation), my window manager will have the ability to make custom resolutions to better support this hardware, to be placed in an experimental tab in the resolution settings with a warning that you might not be able to see the screen if you get it wrong. Other window managers and desktop environments that are installed into a Raynix distro have the capability to detect resolutions automatically.
@@ -33,17 +33,23 @@ In the event that Raynix is ported to architectures with strange and forced scre
 ### 5. Filesystem
 The default directory will remain mostly similar to Linux's, save for the changes to the way the kernel works. I mentioned these new folders in "1. Kernel", those being /krn, /krn/add and krn/core. /krn is the kernel folder, where Raynix itself and its addons will sit, whereas Linux often sits in /boot or /bin, varying between distributions and embedded systems. /krn/core is where Raynix will always look for the kernel, to reduce the amount of wild goose chases that can happen. Choices of filesystems will vary depending on what filesystems any chosen distro supports. If a Raynix distro only provides EXT4 and ZFS for server purposes, then other filesystems will have to be installed/compiled manually or with a package manager.
 
-### 6. Licensing
-The relations between software licenses will remain the same as with the Linux kernel, because Raynix is a fork of Linux. If an Arch-based distro adopts Raynix, for example, it will live in the same legal gray area as Arch Linux itself, unless it makes changes to get away from that gray zone or go the other way. Oftentimes, licenses will be included with programs when downloaded, so I'd like to keep that trend going for legality's sake as well.
-
-### 7. Agnosticism
+### 6. Agnosticism
 Raynix should be relatively hardware-agnostic similar to Linux, regardless of the changes. If someone decides to port Raynix to a different architecture, they may have a similar amount of work to do if they did the same with Linux.
 
-### 8. Terminals
+### 7. Terminals
 By default, there should be two TTY terminals. TTY1 will house the graphical interface and TTY2 will be terminal only for debugging and troubleshooting, because Raynix is meant to be used in desktops. Make sure it can be changed however if it'll serve as a main base for thin clients like the Sun Ray line or computers that use VNC, or as a server in the same vein as a great many Linux servers nowadays.
 
-### 9. Repositories
+### 8. Repositories
 Repositories should have their source code available, but are not required to do so. Companies like Broadcom obviously do not want their source code to be revealed, so they opt for binary blobs to obscure said code. If the both the source code and binary releases are available, you should be able to choose between them, similarly to FreeBSD with its Ports and Arch with its Chaotic AUR. Additionally, we should have our own repository to house updates for internal packages (like the Raylib-based WM) or for security patches to the kernel. In the repo, the kernel should be named "raynix-X.XX-l-x.xx" where uppercase X is the Raynix version and lowercase x is the Linux version it's based on. Should a major update happen to the Linux kernel, new built-in features should be left in the kernel and drivers should be reworked into Addons.
 
-### 10. Legal
+### 9. Sudo or Doas
+I personally recommend doas because it's less complicated than sudo and a little more secure, but I can see us using sudo if a lot of our infrastructure ends up using it a lot.
+
+### 10. Free Distro Guidelines
+Raynix needs to be open source because of the GPLv2 license, which can help Raynix distros meet the FSF's guidelines, but we won't require them to comply as hardware support can be pretty limited as a result. If they want to, go for it.
+
+### 11. Licensing
+The relations between software licenses will remain the same as with the Linux kernel, because Raynix is a fork of Linux. If an Arch-based distro adopts Raynix, for example, it will live in the same legal gray area as Arch Linux itself, unless it makes changes to get away from that gray zone or go the other way. Oftentimes, licenses will be included with programs when downloaded, so I'd like to keep that trend going for legality's sake as well.
+
+### 12. Legal
 Raynix's situation is the same as Linux's. Because closed source software is blobbed and those involved refuse to reveal the source code, we cannot provide their software by default. However, we can retrieve this software during an installation process from the site involved, which requires an internet connection. If you do not have an internet connection, the user will have to transfer it to their PC which has a Raynix distro installed from another computer so they can install it themselves.
