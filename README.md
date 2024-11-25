@@ -4,6 +4,9 @@ General spec for currently hypothetical improved Linux-forked kernel dubbed "Ray
 
 ## A word from the repo owner
 
+### The Name
+It comes from Raylib (used for the window manager I would make for use with the kernel), and Unix, which Linux is loosely related to.
+
 ### Lack of code of conduct
 Codes of conduct are often used by politically-driven saboteurs in the FOSS space to try and shatter otherwise fruitful projects. They can also be used to ensure that you reveal some important information, such as your name, which can balloon into doxxing. By lacking a code of conduct, the repo owner effectively sits as a king that can more effectively gatekeep saboteurs as long as the power doesn't get to their head. Additionally, you will be able to stay anonymous unless your job needs you to reveal yourself, for whatever reason.
 
