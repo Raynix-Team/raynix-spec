@@ -19,6 +19,9 @@ Raynix as it is described in this spec will fail to run a fair amount of Linux s
 ### Is this Unix or Linux-like? Is it a distro?
 Raynix as a kernel is a (currently hypothetical) fork of the Linux kernel. As a result, it is not considered a distro, and is more of a Linux-like project.
 
+### Regarding recent corporate or ideological disruption of open source projects
+This is the reason I have a lack of code of conduct. Without one, there's no leverage saboteurs can gain by manipulating it in their favor. In the event someone tries to take over the Raynix project, forking by team members is a last resort. As the owner of the involved repos, I can quickly ban saboteurs and verify those who just want to help. As a result, I've turned to an ironic fit of monarchy to solve this issue. Open source won't die as long as we stay vigilant. Alternatively, I could turn to Derek Taylor's "The FOSS Code of Conduct" to close any and all gaps that could show up with a weaker code of conduct. We'll have to see what happens next if Raynix does get created. Long story short, I'm using my position as owner to rebuke corporate greed and ideological manipulation.
+
 ## Raynix spec
 
 ### 1. Kernel
