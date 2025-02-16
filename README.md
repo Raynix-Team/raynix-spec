@@ -22,6 +22,9 @@ Raynix as a kernel is a (currently hypothetical) fork of the Linux kernel. As a 
 ### Regarding recent corporate or ideological disruption of open source projects
 This is the reason I have a lack of code of conduct. Without one, there's no leverage saboteurs can gain by manipulating it in their favor. In the event someone tries to take over the Raynix project, forking by team members is a last resort. As the owner of the involved repos, I can quickly ban saboteurs and verify those who just want to help. As a result, I've turned to an ironic fit of monarchy to solve this issue. Open source won't die as long as we stay vigilant. Alternatively, I could turn to Derek Taylor's "The FOSS Code of Conduct" to close any and all gaps that could show up with a weaker code of conduct. We'll have to see what happens next if Raynix does get created. Long story short, I'm using my position as owner to rebuke corporate greed and ideological manipulation.
 
+### Regarding Rust and its potential application
+The bull rush performed by supporters of the Rust language has shown some things that both refute its default memory safety and prove its inferiority to similarly-written C. If possible, the parts involved should be rewritten in C. If protest comes up, I request that you provide good reason that the involved part of the kernel should remain written in Rust.
+
 ## Raynix spec
 
 ### 1. Kernel
