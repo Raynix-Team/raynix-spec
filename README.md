@@ -16,6 +16,9 @@ I would have left this unlicensed, because (I am not a lawyer) it would have all
 ### Notes on compatibility-breaking changes
 Raynix as it is described in this spec will fail to run a fair amount of Linux software as it currently exists, and said software will need to be tweaked in order for it to be usable, but with the kernel being a Linux fork, only some aforementioned tweaks will be needed. Drivers will also need to be reworked. This is because I'm leaning away from Linux's current design philosophy, where the kernel shoulders far too much responsibility, to the point that drivers you install have to rebuild the kernel to add the relevant code that also probably needs a binary blob. By separating responsibilities while keeping said responsibilities tightly integrated, I hope that Raynix will be more stable in general down the line.
 
+### Notes on AI-generated code
+Currently, I cannot, in good faith, trust the results of AI-generated code to be compliant with GPLv2 or other licenses that can be converted to GPLv2, nor can they be trusted to be conducive to the development of Raynix. As such, an explicit ban is in effect against the use of large language models of any kind, even ones under an open source license, and even local LLMs seen on HuggingFace. My apologies to those who think that AI is the future, you will have to wait until I (AceSoren) decide to lift this ban.
+
 ### Is this Unix or Linux-like? Is it a distro?
 Raynix as a kernel is a (currently hypothetical) fork of the Linux kernel. As a result, it is not considered a distro, and is more of a Linux-like project.
 
